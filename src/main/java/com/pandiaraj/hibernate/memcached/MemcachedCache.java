@@ -2,8 +2,7 @@ package com.pandiaraj.hibernate.memcached;
 
 import org.hibernate.cache.CacheException;
 
-public interface MemcachedCache {
-	
+public interface MemcachedCache {	
 	String getName();
 	boolean exists(Object key);
 	Object get(Object key) throws CacheException;
@@ -17,5 +16,4 @@ public interface MemcachedCache {
 	boolean lock(Object key, long durationMSecs) throws InterruptedException;
 	void unlock(Object key);
 	void destroy();
-
 }
